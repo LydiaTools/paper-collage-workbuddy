@@ -1,5 +1,7 @@
 # 生活职场纸片动画 · Paper Collage for WorkBuddy
 
+**简体中文** · [English](README.en.md)
+
 **把那些说不清的疲惫，做成看得见的小故事。**
 
 忙了一整天，回头看，最重要的事还停在原地。
