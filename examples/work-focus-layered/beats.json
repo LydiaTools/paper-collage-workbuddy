@@ -1,0 +1,80 @@
+{
+  "project": "work-focus",
+  "topic": "为什么忙了一天，正事却没做完",
+  "language": "zh",
+  "aspect": "16:9",
+  "width": 1280,
+  "height": 720,
+  "theme": "atomic-age",
+  "arc": "hook_payoff",
+  "renderer": "focus-layered",
+  "character_sheet": "character-puppet.png",
+  "palette": {
+    "orange": "#f17c3b",
+    "teal": "#245d58",
+    "cream": "#fff3df",
+    "gold": "#efb647"
+  },
+  "look": {
+    "palette": "orange #f17c3b, deep teal #245d58, cream #fff3df, gold #efb647"
+  },
+  "audio": {
+    "mode": "generated",
+    "mood": "warm-focus",
+    "seed": 29,
+    "lufs": -20
+  },
+  "beats": [
+    {
+      "id": 1,
+      "title_cn": "忙了一整天，正事没动",
+      "narration": "消息、会议、杂事，一件接一件",
+      "subtitle": "消息、会议、杂事，一件接一件",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 4,
+          "title": true,
+          "shot_size": "WIDE",
+          "camera_move": "static",
+          "scene": "人物面对堆叠的任务纸张、不断增加的消息卡和时钟",
+          "element_motion": "时钟转动，三张任务纸错峰滑入，消息逐个弹出，头部与手臂响应后停稳"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_cn": "一被打断，就要重来",
+      "narration": "重新接上思路，比想象中更费劲",
+      "subtitle": "重新接上思路，比想象中更费劲",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 4,
+          "title": true,
+          "shot_size": "WIDE",
+          "camera_move": "static",
+          "scene": "手机通知打断工作，任务进度退回，人物手臂停止",
+          "element_motion": "手机短促震动，人物转头，进度归零，回转箭头转动一次后停稳"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_cn": "先完成最重要的那件",
+      "narration": "其余的事，等它做完再说",
+      "subtitle": "其余的事，等它做完再说",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 4,
+          "title": true,
+          "shot_size": "WIDE",
+          "camera_move": "static",
+          "scene": "关闭干扰后聚焦一张任务纸，落笔完成并出现对勾",
+          "element_motion": "消息与杂事移出，手机静音落下，手臂落笔，笔迹画出，对勾最后完成"
+        }
+      ]
+    }
+  ]
+}

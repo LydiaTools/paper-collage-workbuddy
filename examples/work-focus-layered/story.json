@@ -1,0 +1,11 @@
+{
+  "width":1280,"height":720,"smooth_fps":60,
+  "character_sheet":"character-puppet.png",
+  "palette":{"orange":"#f17c3b","teal":"#245d58","cream":"#fff3df","gold":"#efb647"},
+  "scenes":[
+    {"seconds":4,"title":"忙了一整天，正事没动","subtitle":"消息、会议、杂事，一件接一件"},
+    {"seconds":4,"title":"一被打断，就要重来","subtitle":"重新接上思路，比想象中更费劲"},
+    {"seconds":4,"title":"先完成最重要的那件","subtitle":"其余的事，等它做完再说"}
+  ],
+  "audio":{"mode":"generated","mood":"warm-focus","seed":29,"lufs":-20}
+}

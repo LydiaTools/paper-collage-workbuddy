@@ -1,0 +1,31 @@
+{
+  "repository": "https://github.com/Alisa0808/vox-director",
+  "commit": "6a85a7c341610442a6a5b1885e6e0217ab82a11f",
+  "license": "MIT",
+  "files": [
+    {
+      "source": "scripts/styles.py",
+      "adapted_location": "scripts/upstream_styles.py",
+      "unchanged": true,
+      "sha256": "a679bcdaaa69442bca7198d15c6d6d355d3ad7d3102cc422f7974d7c040fd97a"
+    },
+    {
+      "source": "references/beat-layer.md",
+      "adapted_location": "references/upstream/beat-layer.md",
+      "unchanged": true,
+      "sha256": "9fce7149b61eb4dbb4d7a6255bdc6f184a0004f45f88c26d0eac5e804620604a"
+    },
+    {
+      "source": "references/prompt-guide.md",
+      "adapted_location": "references/upstream/prompt-guide.md",
+      "unchanged": true,
+      "sha256": "1d6667a8b2db8509df42e0d6b7c46fa8d44f3eb4b2b06223fc91bef82a9035f0"
+    },
+    {
+      "source": "LICENSE",
+      "adapted_location": "LICENSE.upstream",
+      "unchanged": true,
+      "sha256": "7e1978d0b98214db6eff98ce80f3379311059dbabc1c90577b6d06f73c37542f"
+    }
+  ]
+}

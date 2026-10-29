@@ -1,0 +1,9 @@
+.venv/
+.runtime/
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+output/
+.hyperframes/
