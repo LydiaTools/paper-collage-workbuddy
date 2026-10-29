@@ -1,8 +1,10 @@
 # Paper Collage for WorkBuddy
 
-[简体中文](README.md) · **English**
+[简体中文](README.zh-CN.md) · **English**
 
 **Give a familiar feeling a scene of its own.**
+
+Turn a story into a paper collage video with WorkBuddy, and keep the editable project alongside the MP4.
 
 You've been busy all day. The one task that mattered is still sitting there.
 
