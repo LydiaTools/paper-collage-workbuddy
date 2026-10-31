@@ -18,7 +18,7 @@ This WorkBuddy skill organizes the steps from an idea to a paper collage animati
 
 *Six-second silent preview from the included sample. The full 12-second video has music and Chinese captions.*
 
-**[Download the full example with music](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4)** · [Download the skill](https://github.com/LydiaTools/paper-collage-workbuddy/archive/refs/heads/main.zip) · [Setup and first run](references/quickstart.en.md)
+**[Download the full example with music](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4)** · [Download v0.1.0 preview](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip) · [Setup and first run](references/quickstart.en.md)
 
 Adapted from **Alisa Qian's [Vox Director](https://github.com/Alisa0808/vox-director)**, with its story and visual methods retained and a WorkBuddy workflow, local layered animation, and music delivery added. [See the adaptation record](references/adaptation.md).
 

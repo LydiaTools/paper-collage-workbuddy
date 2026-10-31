@@ -14,7 +14,7 @@
 
 ![随包样片预览：橙、深青绿与奶油白的生活职场纸片动画](media/preview.jpg)
 
-**[先看 12 秒带配乐样片](media/work-focus-12s.mp4)** · [下载整个 Skill](https://github.com/LydiaTools/paper-collage-workbuddy/archive/refs/heads/main.zip) · [阅读 SKILL.md](SKILL.md)
+**[先看 12 秒带配乐样片](media/work-focus-12s.mp4)** · [下载 v0.1.0 预览版](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip) · [阅读 SKILL.md](SKILL.md)
 
 本项目基于 [Vox Director](https://github.com/Alisa0808/vox-director) 改造，保留其故事、分镜与视觉方法，补上 WorkBuddy 执行流程、本地分层动画和配乐交付。[具体继承与改动](references/adaptation.md)均保留记录。
 
@@ -47,7 +47,7 @@
 
 ## 让 WorkBuddy 开始第一段
 
-1. [下载仓库 ZIP](https://github.com/LydiaTools/paper-collage-workbuddy/archive/refs/heads/main.zip)，解压后把文件夹命名为 `paper-collage-workbuddy`。
+1. [下载 v0.1.0 预览包](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip)，解压后把文件夹命名为 `paper-collage-workbuddy`。
 2. 将整个文件夹放入 WorkBuddy 当前配置的技能目录。Windows 常见位置是 `%USERPROFILE%\.workbuddy\skills`，以应用设置为准；打开文件夹就应能看到 `SKILL.md`。
 3. 按[上手流程](references/quickstart-layered.md)准备依赖，先复跑随包样片，再换成自己的选题。
 
