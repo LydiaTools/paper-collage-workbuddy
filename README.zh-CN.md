@@ -48,7 +48,7 @@
 ## 让 WorkBuddy 开始第一段
 
 1. [下载 v0.1.0 预览包](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip)，解压后把文件夹命名为 `paper-collage-workbuddy`。
-2. 将整个文件夹放入 WorkBuddy 当前配置的技能目录。Windows 常见位置是 `%USERPROFILE%\.workbuddy\skills`，以应用设置为准；打开文件夹就应能看到 `SKILL.md`。
+2. macOS 的 WorkBuddy 5.9.3 显示 **专家·技能·连接器 → 技能 → 添加技能 → 上传技能**，可选择含 `SKILL.md` 的文件夹或 ZIP；本预览包尚未通过该导入入口实测，其他版本界面可能不同。也可将解压后的整个文件夹放入 WorkBuddy 配置的技能目录，文件夹内应直接包含 `SKILL.md`。Windows 常见位置是 `%USERPROFILE%\.workbuddy\skills`，以应用设置为准。
 3. 按[上手流程](references/quickstart-layered.md)准备依赖，先复跑随包样片，再换成自己的选题。
 
 想做新故事时，可以直接把这段话交给 WorkBuddy：

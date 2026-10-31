@@ -48,7 +48,7 @@ The workflow suits small stories about everyday life, work, and practical habits
 ## Try it with WorkBuddy
 
 1. Download the ZIP and rename the extracted folder to `paper-collage-workbuddy`.
-2. Place the whole folder in WorkBuddy's configured skills directory. `SKILL.md` should sit directly inside it. A common Windows location is `%USERPROFILE%\.workbuddy\skills`; check your application settings.
+2. WorkBuddy 5.9.3 on macOS shows **Experts · Skills · Connectors → Skills → Add Skill → Upload Skill**, with a folder or ZIP selector. This preview has not yet been tested through that importer; labels may vary by version and language. Alternatively, place the whole extracted folder in WorkBuddy's configured skills directory, with `SKILL.md` directly inside it. A common Windows location is `%USERPROFILE%\.workbuddy\skills`; check your application settings.
 3. Follow the [English setup guide](references/quickstart.en.md) to inspect the plan and reproduce the included example.
 
 For a new topic, try this prompt:
