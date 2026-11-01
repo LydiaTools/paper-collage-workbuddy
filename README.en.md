@@ -18,9 +18,9 @@ This WorkBuddy skill organizes the steps from an idea to a paper collage animati
 
 *Six-second silent preview from the included sample. The full 12-second video has music and Chinese captions.*
 
-**[Download the full example with music](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4)** · [Download v0.1.0 preview](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip) · [Setup and first run](references/quickstart.en.md)
+**[Download the full example with music](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4)** · [Download v0.1.1 preview](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.1/paper-collage-workbuddy-v0.1.1.zip) · [Setup and first run](references/quickstart.en.md) · [English skill](SKILL.md) · [中文 Skill](SKILL.zh-CN.md)
 
-Adapted from **Alisa Qian's [Vox Director](https://github.com/Alisa0808/vox-director)**, with its story and visual methods retained and a WorkBuddy workflow, local layered animation, and music delivery added. [See the adaptation record](references/adaptation.md).
+Adapted from **Alisa Qian's [Vox Director](https://github.com/Alisa0808/vox-director)**, with its story and visual methods retained and a WorkBuddy workflow, local layered animation, and music delivery added. [See the adaptation record](references/adaptation.en.md).
 
 ## Start with a story you recognize
 
@@ -59,7 +59,7 @@ If you want to explore before rendering:
 
 > Read the included example and explain how its three story beats become shots. Give me a storyboard table first.
 
-The skill and detailed production references are currently written in Chinese. You can ask WorkBuddy to explain them in English. Native English-language execution in WorkBuddy has not been separately verified.
+The core skill and production guides are available in English and Chinese. Start with the [English skill](SKILL.md), [complete workflow](references/workbuddy-workflow.en.md), and [project fields](references/project-schema.en.md), or use the [Chinese skill](SKILL.zh-CN.md). WorkBuddy's execution of an English prompt has not been separately verified; the included video uses Chinese captions.
 
 ## What you need
 

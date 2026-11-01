@@ -1,6 +1,6 @@
 # 安装依赖与复跑样片
 
-先安装整个 Skill 文件夹，保持 SKILL.md、scripts、assets、examples、references 与许可证的相对位置。下面命令均在这个文件夹中执行。
+先安装整个 Skill 文件夹，保持 `SKILL.md`、`SKILL.zh-CN.md`、scripts、assets、examples、references 与许可证的相对位置。下面命令均在这个文件夹中执行。
 
 ## 1. 准备依赖
 
@@ -54,4 +54,4 @@ macOS/Linux：
 
 ## 使用完整工作流
 
-新选题先读 SKILL.md 与 workbuddy-workflow.md。先运行 `python scripts/workflow.py plan 本期/beats.json 新计划目录` 导出分镜、素材提示词和动作计划；准备真实素材与 HTML 后运行 workflow.py render。完整字段见 project-schema.md。随包样片也可经 workflow.py render examples/work-focus-layered/beats.json 新版本.mp4，后接相同的四个依赖路径参数。
+新选题先读 `SKILL.zh-CN.md` 与 `workbuddy-workflow.md`。先运行 `python scripts/workflow.py plan 本期/beats.json 新计划目录` 导出分镜、素材提示词和动作计划；准备真实素材与 HTML 后运行 workflow.py render。完整字段见 `project-schema.md`。英文文档见 `SKILL.md`、`workbuddy-workflow.en.md`、`project-schema.en.md` 和 `layered-lifestyle.en.md`。随包样片也可经 workflow.py render examples/work-focus-layered/beats.json 新版本.mp4，后接相同的四个依赖路径参数。

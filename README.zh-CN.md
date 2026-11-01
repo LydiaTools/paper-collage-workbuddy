@@ -14,9 +14,9 @@
 
 ![随包样片预览：橙、深青绿与奶油白的生活职场纸片动画](media/preview.jpg)
 
-**[先看 12 秒带配乐样片](media/work-focus-12s.mp4)** · [下载 v0.1.0 预览版](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip) · [阅读 SKILL.md](SKILL.md)
+**[先看 12 秒带配乐样片](media/work-focus-12s.mp4)** · [下载 v0.1.1 预览版](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.1/paper-collage-workbuddy-v0.1.1.zip) · [阅读中文 Skill](SKILL.zh-CN.md) · [English Skill](SKILL.md)
 
-本项目基于 [Vox Director](https://github.com/Alisa0808/vox-director) 改造，保留其故事、分镜与视觉方法，补上 WorkBuddy 执行流程、本地分层动画和配乐交付。[具体继承与改动](references/adaptation.md)均保留记录。
+本项目基于 [Vox Director](https://github.com/Alisa0808/vox-director) 改造，保留其故事、分镜与视觉方法，补上 WorkBuddy 执行流程、本地分层动画和配乐交付。[具体继承与改动](references/adaptation.md)均保留记录；也可阅读[英文版](references/adaptation.en.md)。
 
 ## 先从一个熟悉的故事开始
 
@@ -63,10 +63,10 @@
 
 | 你接下来要做的事 | 入口 |
 | --- | --- |
-| 安装依赖、复跑第一段样片 | [上手流程](references/quickstart-layered.md) |
-| 从新选题走到最终成片 | [完整制作流程](references/workbuddy-workflow.md) |
-| 修改分镜、时长、声音和渲染配置 | [项目参数](references/project-schema.md) |
-| 看看相对原项目改了什么 | [二次开发记录](references/adaptation.md) |
+| 安装依赖、复跑第一段样片 | [中文上手流程](references/quickstart-layered.md) · [English](references/quickstart.en.md) |
+| 从新选题走到最终成片 | [中文制作流程](references/workbuddy-workflow.md) · [English](references/workbuddy-workflow.en.md) |
+| 修改分镜、时长、声音和渲染配置 | [中文项目参数](references/project-schema.md) · [English](references/project-schema.en.md) |
+| 看看相对原项目改了什么 | [中文改造记录](references/adaptation.md) · [English](references/adaptation.en.md) |
 
 本地制作使用 Python、Node、HyperFrames、GSAP 和 FFmpeg，首次运行需准备相应依赖与中文字体。故事和素材由 WorkBuddy 的实际模型及可用工具组织，脚本负责校验、提示词组合、渲染与合成。默认流程不要求 Atlas Cloud API，当前没有接入 MiniMax、Veo 等视频生成服务。
 

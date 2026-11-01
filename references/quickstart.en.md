@@ -1,6 +1,6 @@
 # Setup and your first example
 
-Keep `SKILL.md`, `scripts`, `assets`, `examples`, `references`, and both license files together. Run the commands below from the repository root.
+Keep `SKILL.md`, `SKILL.zh-CN.md`, `scripts`, `assets`, `examples`, `references`, and both license files together. Run the commands below from the repository root.
 
 ## 1. Inspect the storyboard first
 
@@ -62,4 +62,4 @@ Open `output/first-video.mp4` and the adjacent `first-video-assets` directory. T
 
 Watch the complete clip and listen to the sound. Check captions, finished movements, and any narration. The silent `picture.mp4` is an intermediate file; the named final MP4 is the delivery.
 
-For new topics, start with [SKILL.md](../SKILL.md) and the [full workflow](workbuddy-workflow.md). Detailed configuration fields are in [project-schema.md](project-schema.md). These references are currently in Chinese.
+For a new topic, start with the English [SKILL.md](../SKILL.md) and [complete workflow](workbuddy-workflow.en.md). Field details are in [project-schema.en.md](project-schema.en.md); audio and sample-renderer settings are in [layered-lifestyle.en.md](layered-lifestyle.en.md). The Chinese versions remain available as `SKILL.zh-CN.md` and the unsuffixed Chinese reference files.
