@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md) · **English**
 
-**Give a familiar feeling a scene of its own.**
+**Turn a familiar frustration into a paper-collage video you can keep editing.**
 
 Turn a story into a paper collage video with WorkBuddy, and keep the editable project alongside the MP4.
 
@@ -14,11 +14,13 @@ A short animation can make that moment visible: messages crowd the desk, progres
 
 This WorkBuddy skill organizes the steps from an idea to a paper collage animation: story, shots, separate visual pieces, movement, music, and a rendered video. It keeps the editable project alongside the MP4, so the next change can start where you left off.
 
-![A silent excerpt of the included orange, teal, and cream animation, with Chinese captions](media/preview-motion.gif)
+| English sample | Chinese sample |
+| --- | --- |
+| ![English-captioned paper collage animation preview](media/preview-motion-en.gif) | ![Chinese-captioned paper collage animation preview](media/preview-motion.gif) |
 
-*Six-second silent preview from the included sample. The full 12-second video has music and Chinese captions.*
+*Each preview is a silent six-second excerpt. The full 12-second examples include instrumental music; the storyboard and editable scene template are in the repository.*
 
-**[Download the full example with music](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4)** · [Download v0.1.1 preview](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.1/paper-collage-workbuddy-v0.1.1.zip) · [Setup and first run](references/quickstart.en.md) · [English skill](SKILL.md) · [中文 Skill](SKILL.zh-CN.md)
+**[Watch or download the English sample](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s-en.mp4)** · [Chinese sample](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4) · [Download v0.1.2 preview](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.2/paper-collage-workbuddy-v0.1.2.zip) · [Setup and first run](references/quickstart.en.md) · [English skill](SKILL.md) · [中文 Skill](SKILL.zh-CN.md)
 
 Adapted from **Alisa Qian's [Vox Director](https://github.com/Alisa0808/vox-director)**, with its story and visual methods retained and a WorkBuddy workflow, local layered animation, and music delivery added. [See the adaptation record](references/adaptation.en.md).
 
@@ -32,7 +34,7 @@ The included example asks: **Why did a whole busy day leave the important work u
 | An interruption means starting again | A phone notification interrupts the action; progress resets. |
 | Finish the one thing that matters | Distractions leave, the character writes, and a check mark appears. |
 
-Three shots, four seconds each. Orange, deep teal, cream, and locally synthesized instrumental music. The supplied video and project captions are in Chinese; the table above translates their meaning.
+Three shots, four seconds each. Orange, deep teal, cream, and locally synthesized instrumental music. The English and Chinese caption files use the same scene timing and motion; see [`beats.en.json`](examples/work-focus-layered/beats.en.json) and [`beats.json`](examples/work-focus-layered/beats.json).
 
 Run that example first, then use its structure to understand how a sentence becomes a shot and a shot becomes movement. A new story needs its own assets and choreography.
 
@@ -59,11 +61,11 @@ If you want to explore before rendering:
 
 > Read the included example and explain how its three story beats become shots. Give me a storyboard table first.
 
-The core skill and production guides are available in English and Chinese. Start with the [English skill](SKILL.md), [complete workflow](references/workbuddy-workflow.en.md), and [project fields](references/project-schema.en.md), or use the [Chinese skill](SKILL.zh-CN.md). WorkBuddy's execution of an English prompt has not been separately verified; the included video uses Chinese captions.
+The core skill and production guides are available in English and Chinese. Start with the [English skill](SKILL.md), [complete workflow](references/workbuddy-workflow.en.md), and [project fields](references/project-schema.en.md), or use the [Chinese skill](SKILL.zh-CN.md). The English sample is rendered from a checked-in English storyboard; WorkBuddy's end-to-end handling of an English prompt has not been separately verified.
 
 ## What you need
 
-Local rendering uses Python, Node, HyperFrames, GSAP, and FFmpeg. The supplied example also needs a Chinese font. The [setup guide](references/quickstart.en.md) includes dependency versions and commands. This version does not require an Atlas Cloud API account and has no MiniMax or Veo integration.
+Local rendering uses Python, Node, HyperFrames, GSAP, and FFmpeg. The Chinese sample needs a CJK font; the English sample uses a Latin system font. The [setup guide](references/quickstart.en.md) includes dependency versions and commands. This version does not require an Atlas Cloud API account and has no MiniMax or Veo integration.
 
 The repository includes one concrete 12-second project. For a new topic or aspect ratio, prepare the scenes and motion for that content before rendering.
 

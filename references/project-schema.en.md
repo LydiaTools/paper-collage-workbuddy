@@ -1,6 +1,6 @@
 # Project Fields and Commands
 
-Keep the upstream `project`, `topic`, `language`, `aspect`, `theme`, `arc`, `beats`, and `shots` structure. Each beat needs a unique `id`, `title_cn` field, and `narration`. The `title_cn` key is retained for compatibility; its value contains the displayed title. Each shot needs `id`, `dur`, `shot_size`, `camera_move`, `scene`, and `element_motion`.
+Keep the upstream `project`, `topic`, `language`, `aspect`, `theme`, `arc`, `beats`, and `shots` structure. Each beat needs a unique `id`, a localized title (`title_en` for English or `title_cn` for Chinese), and `narration`. Existing projects using only `title_cn` remain supported. Optional `subtitle_en` and `subtitle_cn` fields set on-screen captions; if omitted, narration is used. Each shot needs `id`, `dur`, `shot_size`, `camera_move`, `scene`, and `element_motion`.
 
 Additional local fields are `width`, `height`, `renderer`, `editable_project`, and `audio`. `renderer` is `hyperframes` for a new editable project or `focus-layered` for the supplied sample. The HyperFrames route requires a real editable project whose dimensions and duration match the storyboard. The sample renderer requires a `character_sheet`, exactly three scenes, 1280×720, and at least four seconds per scene.
 
@@ -22,7 +22,7 @@ Supported shot sizes: `EST_WIDE`, `WIDE`, `MEDIUM`, `CLOSE`, `DETAIL`. Supported
   "beats": [
     {
       "id": 1,
-      "title_cn": "one specific problem",
+      "title_en": "one specific problem",
       "narration": "Approved narration goes here.",
       "shots": [
         {

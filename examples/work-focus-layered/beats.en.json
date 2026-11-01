@@ -1,0 +1,80 @@
+{
+  "project": "work-focus-en",
+  "topic": "Why can a busy day leave the important work untouched?",
+  "language": "en",
+  "aspect": "16:9",
+  "width": 1280,
+  "height": 720,
+  "theme": "atomic-age",
+  "arc": "hook_payoff",
+  "renderer": "focus-layered",
+  "character_sheet": "character-puppet.png",
+  "palette": {
+    "orange": "#f17c3b",
+    "teal": "#245d58",
+    "cream": "#fff3df",
+    "gold": "#efb647"
+  },
+  "look": {
+    "palette": "orange #f17c3b, deep teal #245d58, cream #fff3df, gold #efb647"
+  },
+  "audio": {
+    "mode": "generated",
+    "mood": "warm-focus",
+    "seed": 29,
+    "lufs": -20
+  },
+  "beats": [
+    {
+      "id": 1,
+      "title_en": "A full day. Still no progress.",
+      "narration": "Messages, meetings, little tasks—one after another.",
+      "subtitle_en": "Messages, meetings, little tasks—one after another.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 4,
+          "title": true,
+          "shot_size": "WIDE",
+          "camera_move": "static",
+          "scene": "A person faces stacks of task papers, message cards, and a clock.",
+          "element_motion": "The clock turns; three task sheets slide in at different times; notifications pop up one by one; the person's head and arms react, then settle."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title_en": "One interruption. Start again.",
+      "narration": "Getting back into a task takes more than a second.",
+      "subtitle_en": "Getting back into a task takes more than a second.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 4,
+          "title": true,
+          "shot_size": "WIDE",
+          "camera_move": "static",
+          "scene": "A phone alert interrupts the work; the task progress resets and the person's arm stops.",
+          "element_motion": "The phone gives a short shake; the person looks over; progress falls to zero; a restart arrow turns once and settles."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title_en": "Finish the one thing that matters.",
+      "narration": "Everything else can wait until it is done.",
+      "subtitle_en": "Everything else can wait until it is done.",
+      "shots": [
+        {
+          "id": "a",
+          "dur": 4,
+          "title": true,
+          "shot_size": "WIDE",
+          "camera_move": "static",
+          "scene": "Distractions leave the frame; the person focuses on one task sheet, writes, and finishes with a check mark.",
+          "element_motion": "Messages and side tasks move out; the phone settles on mute; the writing arm moves; ink draws across the page; the check mark completes last."
+        }
+      ]
+    }
+  ]
+}

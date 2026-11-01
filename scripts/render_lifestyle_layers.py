@@ -3,8 +3,35 @@ from pathlib import Path
 import argparse,json,shutil,subprocess,os,hashlib,html
 from lifestyle_audio import finish_with_music
 
+TEXT = {
+    'zh': {
+        'page_title': '生活职场拼贴动画',
+        'task1': '临时会议', 'task2': '补个资料', 'task3': '马上回复',
+        'hero_title': '重点任务', 'hero_body': '忙了一天，进度却没动',
+        'notice1': '有新消息', 'notice1_small': '这件事也要处理',
+        'notice2': '临时开会', 'notice2_small': '手上的工作先暂停',
+        'notice3': '再改一下', 'notice3_small': '思路又一次被打断',
+        'focus_label': '今天，只先做一件事', 'focus_title': '最重要的那件',
+        'focus_body1': '关掉干扰', 'focus_body2': '给它一段完整时间',
+        'font_stack': 'Yahei, "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif',
+    },
+    'en': {
+        'page_title': 'A Paper Collage About Getting Focus Back',
+        'task1': 'Quick meeting', 'task2': 'One more file', 'task3': 'Reply now',
+        'hero_title': 'Priority task', 'hero_body': 'All day. No progress.',
+        'notice1': 'New message', 'notice1_small': 'Handle this too',
+        'notice2': 'Quick meeting', 'notice2_small': 'Pause your work',
+        'notice3': 'One more edit', 'notice3_small': 'There goes the thought',
+        'focus_label': 'Today, just one thing', 'focus_title': 'One priority',
+        'focus_body1': 'Mute the noise', 'focus_body2': 'Give it one clear hour',
+        'font_stack': 'system-ui, sans-serif',
+    },
+}
+
 def build(config,output,node,hyperframes,gsap,ffmpeg,render=True):
     cfg=json.loads(config.read_text(encoding='utf-8-sig'))
+    language=str(cfg.get('language','zh')).lower()
+    if language not in TEXT: raise ValueError('language must be zh or en')
     if output.exists():raise ValueError('Use a new output filename')
     if len(cfg.get('scenes',[]))!=3:raise ValueError('This layered scene needs three beats: overload, interruption, focus')
     if any(float(s['seconds'])<4 for s in cfg['scenes']):raise ValueError('This choreography needs at least four seconds per beat; shorten only after remapping its action windows')
@@ -16,6 +43,9 @@ def build(config,output,node,hyperframes,gsap,ffmpeg,render=True):
     shutil.copy2(sprite,assets/'character.png');shutil.copy2(gsap,assets/'gsap.min.js')
     total=sum(float(s['seconds']) for s in cfg['scenes'])
     source=(Path(__file__).resolve().parents[1]/'assets/layered-focus.html').read_text(encoding='utf-8')
+    source=source.replace('__LANG__','zh-CN' if language=='zh' else 'en').replace('__FONT_STACK__',TEXT[language]['font_stack'])
+    for key,value in TEXT[language].items():
+        if key!='font_stack': source=source.replace('__'+key.upper()+'__',html.escape(value))
     for i,s in enumerate(cfg['scenes'],1):
         source=source.replace(f'__TITLE{i}__',html.escape(s['title'])).replace(f'__SUB{i}__',html.escape(s.get('subtitle','')))
     palette=cfg.get('palette',{})

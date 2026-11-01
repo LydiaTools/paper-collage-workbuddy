@@ -18,13 +18,17 @@ def save(path, value):
 def validate(doc):
     beats=doc.get('beats',[])
     if not beats: raise ValueError('beats cannot be empty; the host assistant must first write a real storyboard')
+    language=str(doc.get('language','zh')).lower()
+    if language not in ('zh','en'): raise ValueError('language must be zh or en')
+    title_key='title_en' if language=='en' else 'title_cn'
+    fallback_title='title_cn' if language=='en' else 'title_en'
     renderer=doc.get('renderer','hyperframes')
     if renderer not in ('hyperframes','focus-layered'): raise ValueError('Unknown local renderer')
     seen=set();duration=0;warnings=[]
     for beat in beats:
         if 'id' not in beat or str(beat['id']) in seen: raise ValueError('Every beat needs a unique id')
         seen.add(str(beat['id']))
-        if not beat.get('title_cn') or not beat.get('narration'): raise ValueError('Each beat needs title_cn and narration')
+        if not (beat.get(title_key) or beat.get(fallback_title)) or not beat.get('narration'): raise ValueError(f'Each beat needs {title_key} (or {fallback_title}) and narration')
         shots=beat.get('shots',[])
         if not shots: raise ValueError('Each beat needs actual shots')
         shot_ids=set()
@@ -51,7 +55,9 @@ def plan(config, destination):
     if destination.exists() and any(destination.iterdir()): raise ValueError('Use an empty planning output directory')
     destination.mkdir(parents=True,exist_ok=True)
     theme=resolve_theme(doc.get('theme','atomic-age')) or {}
-    prompts=[];motions=[];time=0;table=['# 分镜与动作表','','|时间|镜头|正文|场景|独立动作|','|---|---|---|---|---|']
+    language=str(doc.get('language','zh')).lower()
+    if language=='en': table=['# Storyboard and Motion Plan','','|Time|Shot|Narration|Scene|Object motion|','|---|---|---|---|---|']
+    else: table=['# 分镜与动作表','','|时间|镜头|正文|场景|独立动作|','|---|---|---|---|---|']
     for beat in doc['beats']:
         for shot in beat['shots']:
             key=f'{beat["id"]}-{shot["id"]}';dur=float(shot['dur'])
@@ -91,9 +97,13 @@ def render(config,output,node,hyperframes,gsap,ffmpeg):
         audio=dict(doc.get('audio',{'mode':'generated','mood':'warm-focus','seed':29}))
         for key in ('narration','path'):
             if audio.get(key):audio[key]=str((root/audio[key]).resolve())
-        local={'width':summary['width'],'height':summary['height'],'smooth_fps':60,
+        language=str(doc.get('language','zh')).lower()
+        title_key='title_en' if language=='en' else 'title_cn'
+        subtitle_key='subtitle_en' if language=='en' else 'subtitle_cn'
+        local={'width':summary['width'],'height':summary['height'],'smooth_fps':60,'language':language,
             'character_sheet':str(sprite),'palette':doc.get('palette',{}),'audio':audio,
-            'scenes':[{'seconds':b['shots'][0]['dur'],'title':b['title_cn'],'subtitle':b.get('subtitle',b['narration'])} for b in doc['beats']]}
+            'scenes':[{'seconds':b['shots'][0]['dur'],'title':b.get(title_key) or b.get('title_cn') or b.get('title_en'),
+                'subtitle':b.get(subtitle_key) or b.get('subtitle') or b['narration']} for b in doc['beats']]}
         cfg=build/'resolved-story.json';save(cfg,local)
         project=render_layers(cfg,output,node,hyperframes,gsap,ffmpeg)
     else:

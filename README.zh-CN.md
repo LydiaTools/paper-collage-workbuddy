@@ -14,7 +14,7 @@
 
 ![随包样片预览：橙、深青绿与奶油白的生活职场纸片动画](media/preview.jpg)
 
-**[先看 12 秒带配乐样片](media/work-focus-12s.mp4)** · [下载 v0.1.1 预览版](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.1/paper-collage-workbuddy-v0.1.1.zip) · [阅读中文 Skill](SKILL.zh-CN.md) · [English Skill](SKILL.md)
+**[先看 12 秒带配乐中文样片](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s.mp4)** · [Watch the English-captioned sample](https://raw.githubusercontent.com/LydiaTools/paper-collage-workbuddy/main/media/work-focus-12s-en.mp4) · [下载 v0.1.2 预览版](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.2/paper-collage-workbuddy-v0.1.2.zip) · [阅读中文 Skill](SKILL.zh-CN.md) · [English Skill](SKILL.md)
 
 本项目基于 [Vox Director](https://github.com/Alisa0808/vox-director) 改造，保留其故事、分镜与视觉方法，补上 WorkBuddy 执行流程、本地分层动画和配乐交付。[具体继承与改动](references/adaptation.md)均保留记录；也可阅读[英文版](references/adaptation.en.md)。
 
@@ -47,7 +47,7 @@
 
 ## 让 WorkBuddy 开始第一段
 
-1. [下载 v0.1.0 预览包](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.0/paper-collage-workbuddy-v0.1.0.zip)，解压后把文件夹命名为 `paper-collage-workbuddy`。
+1. [下载 v0.1.2 预览包](https://github.com/LydiaTools/paper-collage-workbuddy/releases/download/v0.1.2/paper-collage-workbuddy-v0.1.2.zip)，解压后把文件夹命名为 `paper-collage-workbuddy`。
 2. macOS 的 WorkBuddy 5.9.3 显示 **专家·技能·连接器 → 技能 → 添加技能 → 上传技能**，可选择含 `SKILL.md` 的文件夹或 ZIP；本预览包尚未通过该导入入口实测，其他版本界面可能不同。也可将解压后的整个文件夹放入 WorkBuddy 配置的技能目录，文件夹内应直接包含 `SKILL.md`。Windows 常见位置是 `%USERPROFILE%\.workbuddy\skills`，以应用设置为准。
 3. 按[上手流程](references/quickstart-layered.md)准备依赖，先复跑随包样片，再换成自己的选题。
 
@@ -68,7 +68,7 @@
 | 修改分镜、时长、声音和渲染配置 | [中文项目参数](references/project-schema.md) · [English](references/project-schema.en.md) |
 | 看看相对原项目改了什么 | [中文改造记录](references/adaptation.md) · [English](references/adaptation.en.md) |
 
-本地制作使用 Python、Node、HyperFrames、GSAP 和 FFmpeg，首次运行需准备相应依赖与中文字体。故事和素材由 WorkBuddy 的实际模型及可用工具组织，脚本负责校验、提示词组合、渲染与合成。默认流程不要求 Atlas Cloud API，当前没有接入 MiniMax、Veo 等视频生成服务。
+本地制作使用 Python、Node、HyperFrames、GSAP 和 FFmpeg；中文样片需准备中文字体，英文样片使用常见拉丁字体。故事和素材由 WorkBuddy 的实际模型及可用工具组织，脚本负责校验、提示词组合、渲染与合成。默认流程不要求 Atlas Cloud API，当前没有接入 MiniMax、Veo 等视频生成服务。
 
 随包提供的是一段 12 秒、三镜头的具体例子。新故事的镜头数量、画幅、素材和编舞按内容重新安排；安装与复跑步骤见上面的指南。
 

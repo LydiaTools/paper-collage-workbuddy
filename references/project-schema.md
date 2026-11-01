@@ -1,6 +1,6 @@
 # 项目字段与命令
 
-保留上游 `project`、`topic`、`language`、`aspect`、`theme`、`arc`、`beats`、`shots` 结构。每段需要唯一 id、title_cn、narration；每镜需要 id、dur、shot_size、camera_move、scene、element_motion。
+保留上游 `project`、`topic`、`language`、`aspect`、`theme`、`arc`、`beats`、`shots` 结构。每段需要唯一 id、按语言填写的标题（英文用 `title_en`，中文用 `title_cn`）和 narration；旧项目只含 `title_cn` 时仍可使用。可选的 `subtitle_en`、`subtitle_cn` 用于屏幕字幕；未填写时使用 narration。每镜需要 id、dur、shot_size、camera_move、scene、element_motion。
 
 新增本地字段：width、height、renderer、editable_project、audio。`renderer` 为 `hyperframes` 或随包专用 `focus-layered`。前者需要 WorkBuddy 创建真实的可编辑工程；工程尺寸和总时长必须与分镜一致。后者需要 character_sheet，固定三段、1280×720、各至少4秒。
 
