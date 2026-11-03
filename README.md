@@ -63,15 +63,23 @@ If you want to explore before rendering:
 
 The WorkBuddy guides and production references are bilingual. Start with the [English WorkBuddy skill](SKILL.md), [English Codex skill](.agents/skills/paper-collage-animation/SKILL.md) · [中文说明](.agents/skills/paper-collage-animation/SKILL.zh-CN.md), [complete workflow](references/workbuddy-workflow.en.md), and [project fields](references/project-schema.en.md). The English sample is rendered from a checked-in English storyboard; WorkBuddy's end-to-end handling of an English prompt has not been separately verified.
 
-## Use the Codex skill
+## Install the agent skill
 
-This repository includes a Codex workflow at `.agents/skills/paper-collage-animation/SKILL.md`. Clone the full repository and open its folder in Codex so the skill can use the included renderer, references, and example project:
+The `paper-collage-animation` skill is published at the standard `.agents/skills/` path. Install it into a supported agent with the Skills CLI:
+
+```bash
+npx skills add https://github.com/LydiaTools/paper-collage-workbuddy --skill paper-collage-animation
+```
+
+This installs the workflow instructions only. To create and render a video, clone the complete repository and open it in your agent so the skill can use the renderer, references, and example project:
 
 ```bash
 git clone https://github.com/LydiaTools/paper-collage-workbuddy.git
 ```
 
-Then ask Codex to use `paper-collage-animation` to create or revise a story. The Codex skill guides planning, asset preparation, editable scene work, and local rendering. It requires the repository's local video dependencies; the skill file by itself does not contain the renderer. This Codex workflow is newly added and has not yet been verified in a fresh Codex session.
+The same skill can guide Codex and other agents supported by the CLI. It requires the repository's local video dependencies; the skill file by itself does not contain the renderer. This Codex workflow is newly added and has not yet been verified in a fresh Codex session.
+
+The Skills CLI collects anonymous installation telemetry by default for its leaderboard. Set `DISABLE_TELEMETRY=1` to opt out; see the [CLI documentation](https://www.skills.sh/docs/cli).
 
 ## What you need
 

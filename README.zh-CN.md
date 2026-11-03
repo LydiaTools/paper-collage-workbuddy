@@ -59,15 +59,23 @@
 
 > 用随包样片给我讲清楚：这三句话为什么这样拆镜头，每个动作分别在表达什么。先出分镜表。
 
-## 在 Codex 中使用
+## 安装 Agent Skill
 
-仓库内提供了 Codex Skill：`.agents/skills/paper-collage-animation/SKILL.md`。先克隆完整仓库，并在 Codex 中打开项目目录，让 Skill 能访问随包的渲染脚本、参考文档和样例工程：
+仓库已将 `paper-collage-animation` 放在标准 `.agents/skills/` 路径。可以用 Skills CLI 安装到它支持的 Agent：
+
+```bash
+npx skills add https://github.com/LydiaTools/paper-collage-workbuddy --skill paper-collage-animation
+```
+
+这条命令只安装工作流说明。要实际制作和渲染视频，还需要克隆完整仓库并在 Agent 中打开，让 Skill 能访问渲染脚本、参考文档和样例工程：
 
 ```bash
 git clone https://github.com/LydiaTools/paper-collage-workbuddy.git
 ```
 
-然后让 Codex 使用 `paper-collage-animation` Skill 制作或修改故事。它会引导分镜规划、素材准备、可编辑场景和本地渲染。实际渲染仍需要安装仓库要求的视频依赖；单独复制 Skill 文件不包含渲染器。这份 Codex 流程刚加入，尚未在全新 Codex 会话中完成实跑验证。可以先读[中文说明](.agents/skills/paper-collage-animation/SKILL.zh-CN.md)；Codex 入口文件为[英文版](.agents/skills/paper-collage-animation/SKILL.md)。
+Codex 和 CLI 支持的其他 Agent 都可以使用这套工作流。渲染仍需要安装仓库要求的视频依赖；单独安装 Skill 不会带上渲染器。这份 Codex 流程刚加入，尚未在全新 Codex 会话中完成实跑验证。可以先读[中文说明](.agents/skills/paper-collage-animation/SKILL.zh-CN.md)；英文入口文件为[英文版](.agents/skills/paper-collage-animation/SKILL.md)。
+
+Skills CLI 默认会收集匿名安装数据用于排行榜。设置 `DISABLE_TELEMETRY=1` 可以关闭；详见 [CLI 文档](https://www.skills.sh/docs/cli)。
 
 ## 想继续改，可以从这里找
 
