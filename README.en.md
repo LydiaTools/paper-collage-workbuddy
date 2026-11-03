@@ -1,4 +1,4 @@
-# Paper Collage for WorkBuddy
+# Paper Collage Animation Skills
 
 [简体中文](README.zh-CN.md) · **English**
 
@@ -12,7 +12,7 @@ You finally find your train of thought. A notification arrives. Now you have to 
 
 A short animation can make that moment visible: messages crowd the desk, progress slips back, and eventually the distractions leave enough room to finish one thing.
 
-This WorkBuddy skill organizes the steps from an idea to a paper collage animation: story, shots, separate visual pieces, movement, music, and a rendered video. It keeps the editable project alongside the MP4, so the next change can start where you left off.
+These WorkBuddy and Codex workflows organize the steps from an idea to a paper collage animation: story, shots, separate visual pieces, movement, music, and a rendered video. They keep the editable project alongside the MP4, so the next change can start where you left off.
 
 | English sample | Chinese sample |
 | --- | --- |
@@ -45,7 +45,7 @@ Run that example first, then use its structure to understand how a sentence beco
 - **Keep the voice you chose.** Use an existing narration track and mix generated instrumental music underneath it.
 - **Keep the work editable.** Save the MP4, HTML project, storyboard, assets, music, and run report together.
 
-The workflow suits small stories about everyday life, work, and practical habits. WorkBuddy's available model and tools prepare the story, imagery, and motion project; the Python scripts validate plans, assemble prompts, render, and mix audio.
+The workflow suits small stories about everyday life, work, and practical habits. The selected agent's available model and image tools prepare the story, imagery, and motion project; the Python scripts validate plans, assemble prompts, render, and mix audio.
 
 ## Try it with WorkBuddy
 
@@ -61,7 +61,17 @@ If you want to explore before rendering:
 
 > Read the included example and explain how its three story beats become shots. Give me a storyboard table first.
 
-The core skill and production guides are available in English and Chinese. Start with the [English skill](SKILL.md), [complete workflow](references/workbuddy-workflow.en.md), and [project fields](references/project-schema.en.md), or use the [Chinese skill](SKILL.zh-CN.md). The English sample is rendered from a checked-in English storyboard; WorkBuddy's end-to-end handling of an English prompt has not been separately verified.
+The WorkBuddy guides and production references are bilingual. Start with the [English WorkBuddy skill](SKILL.md), [English Codex skill](.agents/skills/paper-collage-animation/SKILL.md) · [中文说明](.agents/skills/paper-collage-animation/SKILL.zh-CN.md), [complete workflow](references/workbuddy-workflow.en.md), and [project fields](references/project-schema.en.md). The English sample is rendered from a checked-in English storyboard; WorkBuddy's end-to-end handling of an English prompt has not been separately verified.
+
+## Use the Codex skill
+
+This repository includes a Codex workflow at `.agents/skills/paper-collage-animation/SKILL.md`. Clone the full repository and open its folder in Codex so the skill can use the included renderer, references, and example project:
+
+```bash
+git clone https://github.com/LydiaTools/paper-collage-workbuddy.git
+```
+
+Then ask Codex to use `paper-collage-animation` to create or revise a story. The Codex skill guides planning, asset preparation, editable scene work, and local rendering. It requires the repository's local video dependencies; the skill file by itself does not contain the renderer. This Codex workflow is newly added and has not yet been verified in a fresh Codex session.
 
 ## What you need
 

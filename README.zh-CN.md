@@ -1,4 +1,4 @@
-# 生活职场纸片动画 · Paper Collage for WorkBuddy
+# 生活职场纸片动画 · WorkBuddy 与 Codex
 
 **简体中文** · [English](README.en.md)
 
@@ -10,7 +10,7 @@
 
 这些感受，写成一句话很容易。想让别人看见那个瞬间，就要再往前走一步：让消息一条条挤进画面，让做到一半的进度退回去，再让人物安静下来，完成眼前的那件事。
 
-这个 Skill 把这段制作流程整理给 WorkBuddy：从选题和文案出发，安排分镜、准备素材、设计动作，再把画面和声音合成一段动画。你可以打开工程，继续改到它更像你想表达的样子。
+这份仓库把从选题、分镜、素材、动作到声音合成的制作流程整理成 WorkBuddy 和 Codex 两种入口。你可以打开工程，继续改到它更像你想表达的样子。
 
 ![随包样片预览：橙、深青绿与奶油白的生活职场纸片动画](media/preview.jpg)
 
@@ -43,7 +43,7 @@
 - **声音跟着表达走。** 可生成器乐配乐；已有认可的口播就沿用，混音时让音乐在人声下面。
 - **成片之后，还能接着做。** 交付带音轨的 MP4，也保留可编辑 HTML、分镜、素材、独立配乐和运行报告。
 
-适合拿来做生活观察、职场感受，以及一个小方法的解释短片。你带来想说的事，WorkBuddy 按流程组织制作；新素材和新动作仍需要由它实际调用可用工具来完成。
+适合拿来做生活观察、职场感受，以及一个小方法的解释短片。你带来想说的事，所选 Agent 按流程组织制作；新素材和新动作仍需要它实际调用可用工具来完成。
 
 ## 让 WorkBuddy 开始第一段
 
@@ -59,10 +59,21 @@
 
 > 用随包样片给我讲清楚：这三句话为什么这样拆镜头，每个动作分别在表达什么。先出分镜表。
 
+## 在 Codex 中使用
+
+仓库内提供了 Codex Skill：`.agents/skills/paper-collage-animation/SKILL.md`。先克隆完整仓库，并在 Codex 中打开项目目录，让 Skill 能访问随包的渲染脚本、参考文档和样例工程：
+
+```bash
+git clone https://github.com/LydiaTools/paper-collage-workbuddy.git
+```
+
+然后让 Codex 使用 `paper-collage-animation` Skill 制作或修改故事。它会引导分镜规划、素材准备、可编辑场景和本地渲染。实际渲染仍需要安装仓库要求的视频依赖；单独复制 Skill 文件不包含渲染器。这份 Codex 流程刚加入，尚未在全新 Codex 会话中完成实跑验证。可以先读[中文说明](.agents/skills/paper-collage-animation/SKILL.zh-CN.md)；Codex 入口文件为[英文版](.agents/skills/paper-collage-animation/SKILL.md)。
+
 ## 想继续改，可以从这里找
 
 | 你接下来要做的事 | 入口 |
 | --- | --- |
+| 在 Codex 中创作纸片动画 | [Codex Skill 中文说明](.agents/skills/paper-collage-animation/SKILL.zh-CN.md) · [Codex Skill](.agents/skills/paper-collage-animation/SKILL.md) |
 | 安装依赖、复跑第一段样片 | [中文上手流程](references/quickstart-layered.md) · [English](references/quickstart.en.md) |
 | 从新选题走到最终成片 | [中文制作流程](references/workbuddy-workflow.md) · [English](references/workbuddy-workflow.en.md) |
 | 修改分镜、时长、声音和渲染配置 | [中文项目参数](references/project-schema.md) · [English](references/project-schema.en.md) |
